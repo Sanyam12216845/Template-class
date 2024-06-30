@@ -1,0 +1,36 @@
+//impllementing class templates
+#include <iostream>
+using namespace std;
+template <typename T ,typename U>
+class Weight{
+	private:
+		T kg;
+		U grams;
+		
+		public:
+			void setData(T x,U y){
+				kg=x;
+				grams=y;
+			}
+			T getkgData(){
+				return kg;
+			}
+			U getgramsData(){
+				return grams;
+			}
+				
+};
+int main(){
+	Weight <int,double>obj1;
+	
+	obj1.setData(15,500);
+	cout<<"value of kgs:"<<obj1.getkgData()<<endl;
+	cout<<"value of grams:"<<obj1.getgramsData()<<endl;
+	
+	Weight <double, double>obj2;
+	obj2.setData(40.89,3.74);
+	cout<<"value in double for kgs:"<<obj2.getkgData()<<endl;
+	cout<<"value of grams in double:"<<obj2.getgramsData()<<endl;
+	return 0;
+	
+}
